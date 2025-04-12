@@ -39,7 +39,8 @@ jobs:
 
       - name: Run tests
         run:  |
-          echo "Checking java and sbt ... "
+          echo "Checking ubuntu, java, and sbt ... "
+          cat /etc/issue
           java -version
           sbt --version
           echo "Building and running unit tests..."
