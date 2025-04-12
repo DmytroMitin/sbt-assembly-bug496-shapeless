@@ -43,6 +43,8 @@ jobs:
           cat /etc/issue
           java -version
           sbt --version
+          echo "Environment variables..."
+          printenv
           echo "Building and running unit tests..."
           sbt test
 
