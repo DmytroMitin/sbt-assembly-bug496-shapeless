@@ -38,10 +38,17 @@ jobs:
           apps: sbt
 
       - name: Run tests
-        run: sbt test
+        run:  |
+          echo "Checking java and sbt ... "
+          java -version
+          sbt --version
+          echo "Building and running unit tests..."
+          sbt test
 
       - name: Run Main
-        run: sbt run
+        run: |
+          echo "Running Main..."
+          sbt run
 
       - name: Build Fat Jar
         run: |
