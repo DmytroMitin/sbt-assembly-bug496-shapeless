@@ -55,6 +55,9 @@ jobs:
 
       - name: Build Fat Jar
         run: |
+          echo "Environment variables..."
+          printenv
+          echo "Building fat jar..."
           sbt clean assembly
           ls -lah target/scala-2.13
         env:
