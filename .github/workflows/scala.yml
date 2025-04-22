@@ -59,7 +59,8 @@ jobs:
           echo "Environment variables..."
           printenv
           echo "Building fat jar..."
-          sbt -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8 clean assembly
+          sbt clean
+          sbt -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8 assembly
           ls -lah target/scala-2.13
 #        env:
 #          LANG: en_US.UTF-8
